@@ -1,0 +1,170 @@
+/* ----------------------------------------------------------------------------------- */
+
+:root {
+    /* para las mediciones de las 5 filas */
+    --w1: 1fr 1fr 1fr 1fr 1fr;
+    --primaryColor: #b2a4ff;
+    --backgroundColor: #fff9ca;
+    --secondaryColor: #ffdeb4;
+    --tertiaryColor: #ffb4b4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    /* para crear el grid  dif entre grid y flexblox es la
+    la forma en que se acomdan , grid es en cuadrilla bidireccional
+    felxbox es una de las dos */
+    display: grid;
+    grid-template-columns: var(--w1);
+    grid-template-rows: 10vh auto 10vh;
+    /* esto es para trabajar areas 
+    primero las áreas de la aprte de arriba*/
+    grid-template-areas: "aside header header header header" "aside main  main  main main" "aside footer footer footer footer";
+    min-height: 100vh;
+}
+
+header {
+    /* grid-column: grid-column-start / grid-column-end;
+        grid-column-start	Specifies on which column to start displaying the item.	
+    grid-column-end	Specifies on which column-line to stop displaying the item, 
+    or how many columns to span.
+    */
+    /* esto es para pasarle un area llamada de cierta forma */
+    grid-area: header;
+    background-color: var(--backgroundColor);
+}
+
+aside {
+    /* grid row es para agrear columnas y que no quede espacios
+    en balcno */
+    grid-area: aside;
+    background-color: var(--primaryColor);
+}
+
+main {
+    grid-area: main;
+    background-color: var(--secondaryColor);
+}
+
+footer {
+    grid-area: footer;
+    height: 10vh;
+    background-color: var(--tertiaryColor);
+}
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* :root {
+    
+    --w1: 20% 20% 20% 20% 20%;
+    --primaryColor: #b2a4ff;
+    --backgroundColor: #fff9ca;
+    --secondaryColor: #ffdeb4;
+    --tertiaryColor: #ffb4b4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+   
+    display: grid;
+    grid-template-columns: var(--w1);
+    grid-template-rows: 10vh auto 10vh;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+header {
+    
+    grid-column: 2 / span 4;
+    
+    background-color: var(--backgroundColor);
+}
+
+aside {
+    
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 1;
+    background-color: var(--primaryColor);
+}
+
+main {
+    grid-column: 2 / span 4;
+    background-color: var(--secondaryColor);
+}
+
+footer {
+    grid-column: 2 / span 4;
+    height: 10vh;
+    background-color: var(--tertiaryColor);
+} */
+
+
+/* ----------------------------------------------------------------------------------- */
+
+
+/* codigo feo */
+
+
+/* :root {
+     para las mediciones de las 5 filas 
+    --w1: 20% 20% 20% 20% 20%;
+    --primaryColor: #b2a4ff;
+    --backgroundColor: #fff9ca;
+    --secondaryColor: #ffdeb4;
+    --tertiaryColor: #ffb4b4;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+     para crear el grid  dif entre grid y flexblox es la
+    la forma en que se acomdan , grid es en cuadrilla bidireccional
+    felxbox es una de las dos 
+    display: grid;
+    grid-template-columns: var(--w1);
+    grid-template-rows: 10vh auto 10 vh;
+    width: 100vw;
+}
+
+aside {
+     grid row es para agrear columnas y que no quede espacios
+    en balcno 
+    grid-row: 1 / span 3;
+    grid-column: 1 / span 1;
+    min-height: 80vh;
+    background-color: var(--primaryColor);
+}
+
+header {
+    grid-column: 2 / span 4;
+    height: 10vh;
+    background-color: var(--backgroundColor);
+}
+
+main {
+    grid-column: 2 / span 4;
+    min-height: 80vh;
+    background-color: var(--secondaryColor);
+}
+
+footer {
+    grid-column: 2 / span 4;
+    height: 10vh;
+    background-color: var(--tertiaryColor);
+} */
